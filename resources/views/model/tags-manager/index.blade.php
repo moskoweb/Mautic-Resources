@@ -25,7 +25,9 @@
 						@foreach( $tags as $tag )
 						<tr>
 							<td>
-								<code class="bg-indigo text-white">{{ $tag['id'] }}</code>
+								<code class="bg-indigo text-white">
+									{{ ($tag['id'] < 10) ? '0' . $tag['id'] : $tag['id'] }}
+								</code>
 							</td>
 							<td>{{ $tag['tag'] }}</td>
 							<td>

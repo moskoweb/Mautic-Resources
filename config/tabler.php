@@ -17,7 +17,7 @@ return [
         'post-email'    => 'password/email',
         'post-reset'    => 'password/reset',
     ],
-    'footer'  => '<a href="#" class="btn btn-primary btn-sm"><i class="fe fe-github"></i> GitHub</a>&emsp;|&emsp;Todos os Direitos Reservados - Alan Mosko - Copyright © 2018',
+    'footer'  => '<a href="https://github.com/moskoweb/Mautic-Resources" class="btn btn-primary btn-sm"><i class="fe fe-github"></i> GitHub</a>&emsp;|&emsp;Todos os Direitos Reservados - Alan Mosko - Copyright © 2018',
     'support' => [
         'search'      => false,
         'footer-menu' => false,

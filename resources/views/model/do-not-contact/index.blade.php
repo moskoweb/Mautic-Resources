@@ -24,7 +24,9 @@
 						@foreach( $segments as $segment )
 						<tr>
 							<td>
-								<code class="bg-indigo text-white">{{ $segment['id'] }}</code>
+								<code class="bg-indigo text-white">
+									{{ ($segment['id'] < 10) ? '0' . $segment['id'] : $segment['id'] }}
+								</code>
 							</td>
 							<td>
 								{{ $segment['name'] }}

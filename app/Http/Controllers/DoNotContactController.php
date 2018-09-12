@@ -23,8 +23,12 @@ class DoNotContactController extends Controller
 
     public function check($id)
     {
-        $segments = Settings::mauticNewApi('contacts')->getList(urlencode('segment:"' . $id . '"'), null, 5000);
-        dd($segments);
-        return $id;
+        $filter = 'segment:' . $id;
+
+        $contacts = Settings::mauticNewApi('contacts')->getList($filter, null, 5000)['contacts'];
+        foreach ($contacts as $contact) {
+            Settings::mauticNewApi('contacts')->addDnc($contact['id'], 'Mautic Resources - Api', null, null, 'Marcado como "Não Contactar" manualmente.');
+        }
+        return redirect()->route('do-not-contact.index');
     }
 }
